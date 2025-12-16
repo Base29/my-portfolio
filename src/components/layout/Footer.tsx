@@ -15,15 +15,15 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="flex space-x-6">
-                        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                        <a href="https://github.com/Base29" className="text-muted-foreground hover:text-primary transition-colors" target='_blank'>
                             <span className="sr-only">GitHub</span>
                             <Github className="h-5 w-5" />
                         </a>
-                        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                        <a href="https://www.linkedin.com/in/faisal-hussain-28384518/" className="text-muted-foreground hover:text-primary transition-colors" target='_blank'>
                             <span className="sr-only">LinkedIn</span>
                             <Linkedin className="h-5 w-5" />
                         </a>
-                        <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        <a href="mailto:me@imfaisal.pro" className="text-muted-foreground hover:text-primary transition-colors">
                             <span className="sr-only">Email</span>
                             <Mail className="h-5 w-5" />
                         </a>
