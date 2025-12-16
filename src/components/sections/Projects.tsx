@@ -7,6 +7,7 @@ import taskManagerImg from '@/assets/project-task-manager.png';
 import financeImg from '@/assets/project-finance.png';
 import aiLmsImg from '@/assets/project-ai-lms.png';
 import dappImg from '@/assets/project-dapp.png';
+import corporateAppImg from '@/assets/project-corporate-app.jpg';
 
 // Placeholder data
 const projects = [
@@ -54,7 +55,7 @@ const projects = [
         title: 'Corporate Employee App',
         description: 'Internal enterprise mobile application for employee management and secure communications.',
         tags: ['Kotlin', 'Spring Boot', 'Secure'],
-        image: '', // Placeholder used
+        image: corporateAppImg, // Placeholder used: false
         link: '#', // Internal, maybe no link
         github: '#' // Private
     }
