@@ -31,7 +31,7 @@ const Hero = () => {
                     Faisal Hussain
                     <br />
                     <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent text-3xl md:text-5xl lg:text-6xl">
-                        Senior Developer
+                        Solutions Architect
                     </span>
                 </h1>
 
