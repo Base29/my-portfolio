@@ -2,6 +2,11 @@
 // import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ecommerceImg from '@/assets/project-ecommerce.png';
+import taskManagerImg from '@/assets/project-task-manager.png';
+import financeImg from '@/assets/project-finance.png';
+import aiLmsImg from '@/assets/project-ai-lms.png';
+import dappImg from '@/assets/project-dapp.png';
 
 // Placeholder data
 const projects = [
@@ -9,7 +14,7 @@ const projects = [
         title: 'E-Commerce Platform',
         description: 'A fully featured e-commerce application built with Next.js, Stripe, and Sanity CMS.',
         tags: ['Next.js', 'Stripe', 'Sanity'],
-        image: '/src/assets/project-ecommerce.png',
+        image: ecommerceImg,
         link: '#',
         github: '#'
     },
@@ -17,7 +22,7 @@ const projects = [
         title: 'Task Management App',
         description: 'A collaborative task manager with real-time updates using Socket.io and React.',
         tags: ['React', 'Socket.io', 'Node.js'],
-        image: '/src/assets/project-task-manager.png',
+        image: taskManagerImg,
         link: '#',
         github: '#'
     },
@@ -25,7 +30,7 @@ const projects = [
         title: 'Finance Dashboard',
         description: 'Data visualization dashboard for personal finance tracking using Recharts.',
         tags: ['React', 'D3', 'Recharts'],
-        image: '/src/assets/project-finance.png',
+        image: financeImg,
         link: '#',
         github: '#'
     },
@@ -33,7 +38,7 @@ const projects = [
         title: 'AI-Powered LMS',
         description: 'Adaptive Learning Management System using AI to personalize course paths for students.',
         tags: ['Python', 'TensorFlow', 'React'],
-        image: '/src/assets/project-ai-lms.png',
+        image: aiLmsImg,
         link: '#',
         github: '#'
     },
@@ -41,7 +46,7 @@ const projects = [
         title: 'DeFi dApp Mobile',
         description: 'Decentralized Finance mobile application for crypto wallet management and token swaps.',
         tags: ['React Native', 'Solidity', 'Web3.js'],
-        image: '/src/assets/project-dapp.png',
+        image: dappImg,
         link: '#',
         github: '#'
     },

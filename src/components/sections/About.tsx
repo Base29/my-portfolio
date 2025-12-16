@@ -1,6 +1,8 @@
 
 // import React from 'react';
 
+import aboutMeImg from '@/assets/about-me.jpg';
+
 const About = () => {
     return (
         <section id="about" className="py-20 bg-accent/30">
@@ -14,7 +16,7 @@ const About = () => {
                     <div className="relative">
                         <div className="aspect-square rounded-2xl overflow-hidden bg-muted shadow-xl border border-border/50">
                             <img
-                                src="/src/assets/about-me.jpg"
+                                src={aboutMeImg}
                                 alt="Faisal Hussain"
                                 className="w-full h-full object-cover"
                             />

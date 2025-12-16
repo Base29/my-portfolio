@@ -11,6 +11,8 @@ import { Button } from '@/components/ui/button'; // Assuming I'll create this or
 // unless I implement them.
 // Actually, creating a simple generic Button component is easy and good practice.
 
+import heroBg from '@/assets/hero-bg.png';
+
 const Hero = () => {
     return (
         <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-background pt-16">
@@ -18,7 +20,7 @@ const Hero = () => {
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 dark:opacity-10"
-                    style={{ backgroundImage: 'url(/src/assets/hero-bg.png)' }}
+                    style={{ backgroundImage: `url(${heroBg})` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/50 to-background" />
             </div>
