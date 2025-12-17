@@ -2,12 +2,12 @@
 // import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ecommerceImg from '@/assets/project-ecommerce.png';
-import taskManagerImg from '@/assets/project-task-manager.png';
-import financeImg from '@/assets/project-finance.png';
-import aiLmsImg from '@/assets/project-ai-lms.png';
-import dappImg from '@/assets/project-dapp.png';
-import corporateAppImg from '@/assets/project-corporate-app.jpg';
+import ecommerceImg from '@/assets/project-ecommerce.webp';
+import taskManagerImg from '@/assets/project-task-manager.webp';
+import financeImg from '@/assets/project-finance.webp';
+import aiLmsImg from '@/assets/project-ai-lms.webp';
+import dappImg from '@/assets/project-dapp.webp';
+import corporateAppImg from '@/assets/project-corporate-app.webp';
 
 // Placeholder data
 const projects = [

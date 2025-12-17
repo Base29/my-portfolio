@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'; // Assuming I'll create this or
 // unless I implement them.
 // Actually, creating a simple generic Button component is easy and good practice.
 
-import heroBg from '@/assets/hero-bg.png';
+import heroBg from '@/assets/hero-bg.webp';
 
 const Hero = () => {
     return (

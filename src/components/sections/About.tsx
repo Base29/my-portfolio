@@ -1,7 +1,7 @@
 
 // import React from 'react';
 
-import aboutMeImg from '@/assets/about-me.jpg';
+import aboutMeImg from '@/assets/about-me.webp';
 
 const About = () => {
     return (
