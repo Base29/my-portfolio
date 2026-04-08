@@ -8,7 +8,7 @@ const About = () => {
         <section id="about" className="py-20 bg-accent/30">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">About Me</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">About Faisal</h2>
                     <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
                 </div>
 
@@ -17,7 +17,7 @@ const About = () => {
                         <div className="aspect-square rounded-2xl overflow-hidden bg-muted shadow-xl border border-border/50">
                             <img
                                 src={aboutMeImg}
-                                alt="Faisal Moazzam 123"
+                                alt="Faisal Hussain"
                                 className="w-full h-full object-cover"
                             />
                         </div>
