@@ -51,7 +51,7 @@ jobs:
             # Step 7: Copy files via SCP through tunnel
             - name: Deploy files
               run: |
-                  scp -r dist/* ${{ secrets.PI_USERNAME }}@${{ secrets.PI_HOST }}:${{ secrets.PI_TARGET_PATH }}
+                  sudo scp -r dist/* ${{ secrets.PI_USERNAME }}@${{ secrets.PI_HOST }}:${{ secrets.PI_TARGET_PATH }}
 
             # Step 8: Restart server
             - name: Restart Nginx
