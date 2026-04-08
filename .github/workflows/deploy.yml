@@ -49,19 +49,12 @@ jobs:
                   EOF
                   chmod 600 ~/.ssh/config
 
-            # Step 7: Debug SSH config (optional, remove after confirming it works)
-            - name: Debug SSH config
-              run: |
-                  cat ~/.ssh/config
-                  which cloudflared
-                  cloudflared --version
-
-            # Step 8: Deploy files to Raspberry Pi via SCP through Cloudflare Tunnel
+            # Step 7: Deploy files to Raspberry Pi via SCP through Cloudflare Tunnel
             - name: Deploy files
               run: |
                   scp -r dist/* ${{ secrets.PI_USERNAME }}@${{ secrets.PI_HOST }}:${{ secrets.PI_TARGET_PATH }}
 
-            # Step 9: Restart Nginx on Raspberry Pi
+            # Step 8: Restart Nginx on Raspberry Pi
             - name: Restart Nginx
               run: |
                   ssh ${{ secrets.PI_USERNAME }}@${{ secrets.PI_HOST }} "sudo systemctl reload nginx"
