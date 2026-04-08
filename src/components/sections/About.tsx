@@ -17,7 +17,7 @@ const About = () => {
                         <div className="aspect-square rounded-2xl overflow-hidden bg-muted shadow-xl border border-border/50">
                             <img
                                 src={aboutMeImg}
-                                alt="Faisal Moazzam"
+                                alt="Faisal Moazzam 123"
                                 className="w-full h-full object-cover"
                             />
                         </div>
