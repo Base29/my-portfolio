@@ -1,6 +1,5 @@
-
-// import React from 'react';
-import { Calendar, Briefcase } from 'lucide-react';
+import { Calendar, Building } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const experiences = [
     {
@@ -49,45 +48,67 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-20 bg-background">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">Work Experience</h2>
-                    <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
-                </div>
+        <section id="experience" className="py-20 bg-background relative">
+            {/* Decorative elements */}
+            <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-primary/5 blur-3xl -z-10"></div>
 
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {experiences.map((exp, index) => (
-                        <div
-                            key={index}
-                            className="relative p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow h-full flex flex-col"
-                        >
-                            <div className="flex flex-col gap-4">
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex items-start gap-4">
-                                        <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
-                                            <Briefcase className="h-6 w-6" />
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="max-w-3xl mx-auto text-center mb-16"
+                >
+                    <div className="inline-block px-3 py-1 text-sm font-medium bg-secondary/50 rounded-full mb-4">
+                        CAREER JOURNEY
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Work Experience</h2>
+                    <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
+                </motion.div>
+
+                <div className="max-w-6xl mx-auto">
+                    <div className="relative">
+                        {/* Timeline line */}
+                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+
+                        <div className="space-y-8">
+                            {experiences.map((exp, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="relative pl-0 md:pl-24 group"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    {/* Timeline dot */}
+                                    <div className="absolute left-0 top-6 w-4 h-4 rounded-full bg-primary border-4 border-background shadow-lg hidden md:block"></div>
+
+                                    <div className="relative p-6 rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                                            <div className="flex items-start gap-4">
+                                                <div className="p-3 rounded-xl bg-primary/10 text-primary shrink-0">
+                                                    <Building className="h-6 w-6" />
+                                                </div>
+                                                <div>
+                                                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                                                    <p className="text-lg text-muted-foreground font-medium mt-1">{exp.company}</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full w-fit">
+                                                <Calendar className="mr-2 h-4 w-4" />
+                                                {exp.period}
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                                            <p className="text-lg text-muted-foreground font-medium">{exp.company}</p>
-                                        </div>
+                                        <p className="mt-4 text-muted-foreground leading-relaxed">
+                                            {exp.description}
+                                        </p>
                                     </div>
-                                    <div className="hidden lg:flex items-center text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full w-fit shrink-0">
-                                        <Calendar className="mr-2 h-4 w-4" />
-                                        {exp.period}
-                                    </div>
-                                </div>
-                                <div className="lg:hidden flex items-center text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full w-fit">
-                                    <Calendar className="mr-2 h-4 w-4" />
-                                    {exp.period}
-                                </div>
-                            </div>
-                            <p className="mt-4 text-muted-foreground leading-relaxed">
-                                {exp.description}
-                            </p>
+                                </motion.div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </section>
