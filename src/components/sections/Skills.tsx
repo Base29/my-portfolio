@@ -3,7 +3,7 @@ import { Code, Layers, Wrench, Zap } from 'lucide-react';
 
 const skills = {
     Languages: { items: ['Python', 'JavaScript', 'PHP', 'Swift', 'Kotlin', 'TypeScript', 'SQL', 'HTML/CSS', 'Solidity'], icon: Code },
-    'Frameworks & Libraries': { items: ['ReactJS', 'NextJS', 'VueJs', 'NodeJS', 'Django', 'FastAPI', 'Laravel', 'Tailwind CSS', 'Shadcn UI', 'LangChain'], icon: Layers },
+    'Frameworks & Libraries': { items: ['ReactJS', 'React Native', 'Flutter', 'NextJS', 'VueJs', 'NodeJS', 'Django', 'FastAPI', 'Laravel', 'Tailwind CSS', 'Shadcn UI', 'LangChain'], icon: Layers },
     'Tools & DevOps': { items: ['Git', 'Docker', 'AWS', 'Linux', 'Vite', 'PostgreSQL', 'MySQL', 'MongoDB'], icon: Wrench },
     'Blockchain & AI': { items: ['Ethereum', 'Smart Contracts', 'LLMs', 'Prompt Engineering'], icon: Zap },
 };
