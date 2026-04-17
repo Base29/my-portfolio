@@ -5,7 +5,7 @@ const skills = {
     Languages: { items: ['Python', 'JavaScript', 'PHP', 'Swift', 'Kotlin', 'TypeScript', 'SQL', 'HTML/CSS', 'Solidity'], icon: Code },
     'Frameworks & Libraries': { items: ['ReactJS', 'React Native', 'Flutter', 'NextJS', 'VueJs', 'NodeJS', 'Django', 'FastAPI', 'Laravel', 'Tailwind CSS', 'Shadcn UI', 'LangChain'], icon: Layers },
     'Tools & DevOps': { items: ['Git', 'Docker', 'AWS', 'Linux', 'Vite', 'PostgreSQL', 'MySQL', 'MongoDB'], icon: Wrench },
-    'Blockchain & AI': { items: ['Ethereum', 'Smart Contracts', 'LLMs', 'Prompt Engineering'], icon: Zap },
+    'Blockchain & AI': { items: ['Ethereum', 'Smart Contracts', 'Solidity', 'Web3.js', 'OpenZeppelin', 'Truffle', 'Hardhat', 'LLMs', 'Prompt Engineering', 'TensorFlow', 'PyTorch', 'Hugging Face', 'Stable Diffusion', 'ChatGPT API', 'AI Agents'], icon: Zap },
 };
 
 const Skills = () => {
