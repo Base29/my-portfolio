@@ -1,0 +1,150 @@
+---
+const experiences = [
+  {
+    title: 'Principal Software Developer',
+    company: 'Seven Eight Six Media Group',
+    location: 'United Kingdom / Remote',
+    period: 'Jul 2023 — Nov 2025',
+    type: 'Full-time · Principal Role',
+    description:
+      'Directing core software architecture and leading multi-disciplinary engineering squads. Established company-wide engineering standards, decoupled legacy systems into event-driven microservices, and championed AI workflow integrations.',
+    skills: ['Enterprise Architecture', 'FastAPI', 'Node.js', 'PostgreSQL', 'Docker', 'AWS', 'Code Governance'],
+  },
+  {
+    title: 'Senior Full Stack Developer',
+    company: 'Seven Eight Six Media Group',
+    location: 'United Kingdom / Remote',
+    period: 'Jun 2021 — Jul 2023',
+    type: 'Full-time',
+    description:
+      'Engineered high-concurrency web platforms delivering content and digital services across the UK market. Optimized core API response latencies and built modern reactive web frontends with React and TypeScript.',
+    skills: ['React', 'TypeScript', 'Next.js', 'Python', 'RESTful APIs', 'Redis', 'CI/CD'],
+  },
+  {
+    title: 'Lead Full Stack Developer',
+    company: 'Blonk Group',
+    location: 'Singapore',
+    period: 'Nov 2019 — Jul 2020',
+    type: 'Full-time · APAC Lead',
+    description:
+      'Led international full-stack engineering initiatives in Singapore. Steered architectural decisions, mentored developers, and streamlined release cycles with automated delivery pipelines.',
+    skills: ['Full Stack Leadership', 'Microservices', 'Vue.js', 'Node.js', 'MongoDB', 'System Design'],
+  },
+  {
+    title: 'Senior Mobile Application Developer',
+    company: "Eat'n",
+    location: 'Mountain View, CA (Silicon Valley)',
+    period: 'Jun 2018 — Mar 2020',
+    type: 'Contract / Full-time',
+    description:
+      'Spearheaded native and hybrid mobile application development. Engineered 60fps responsive interfaces, optimized geolocation services, and established robust offline data sync mechanisms.',
+    skills: ['Swift', 'Kotlin', 'React Native', 'Mobile Architecture', 'App Store Deployment', 'REST APIs'],
+  },
+  {
+    title: 'Founder & CEO',
+    company: 'Base29',
+    location: 'Lahore, Pakistan / Global Clients',
+    period: 'Jun 2008 — Jun 2019',
+    type: 'Executive & Technical Founder · 11 Years',
+    description:
+      'Founded and scaled a premier digital engineering and software development agency. Guided end-to-end delivery of 50+ enterprise and consumer products for clients across North America, Europe, and Asia.',
+    skills: ['Technical Leadership', 'Product Strategy', 'Client Advisory', 'PHP/Laravel', 'Full-Stack Delivery'],
+  },
+  {
+    title: 'Senior Full Stack Developer',
+    company: 'Base29',
+    location: 'Global Delivery',
+    period: 'Sep 2009 — Jun 2019',
+    type: 'Engineering Leadership',
+    description:
+      'Architected and implemented bespoke web applications, custom CMS engines, e-commerce platforms, and database schemas supporting high transaction volumes.',
+    skills: ['PHP', 'MySQL', 'JavaScript', 'System Architecture', 'Performance Tuning'],
+  },
+  {
+    title: 'Head of I.T. Department',
+    company: 'Shuttle Advertising',
+    location: 'Lahore, Pakistan',
+    period: 'Jan 2008 — Oct 2009',
+    type: 'Departmental Head',
+    description:
+      'Directed corporate IT infrastructure, security protocols, and internal software tooling, establishing foundational digital operational efficiency for marketing campaigns.',
+    skills: ['Infrastructure', 'Network Security', 'Internal Tooling', 'Team Management'],
+  },
+];
+---
+
+<section id="experience" class="py-24 relative overflow-hidden border-t border-border/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="max-w-2xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-primary/10 text-primary mb-3">
+        <span>CAREER TRACK RECORD</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-tight">
+        15 years of technical leadership & architecture.
+      </h2>
+      <p class="text-sm sm:text-base text-muted-foreground mt-4">
+        From founding an 11-year engineering agency to serving as Principal Architect for UK & Silicon Valley organizations.
+      </p>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative">
+      <!-- Vertical Timeline Rule -->
+      <div class="absolute left-4 md:left-8 top-3 bottom-3 w-px bg-gradient-to-b from-primary via-primary/40 to-transparent hidden sm:block"></div>
+
+      <div class="space-y-8">
+        {experiences.map((exp, idx) => (
+          <div class="relative sm:pl-16 group">
+            <!-- Timeline Pin / Node -->
+            <div class="absolute left-4 md:left-8 -translate-x-1/2 top-6 w-3.5 h-3.5 rounded-full border-2 border-background bg-primary shadow-sm shadow-primary/50 hidden sm:block group-hover:scale-125 transition-transform"></div>
+
+            <div class="p-6 sm:p-7 rounded-2xl glass-panel border border-border/70 card-hover-effect">
+              <!-- Top Row: Role, Company, Period -->
+              <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-2 mb-4 pb-4 border-b border-border/40">
+                <div>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <h3 class="font-display font-bold text-lg sm:text-xl text-foreground">
+                      {exp.title}
+                    </h3>
+                    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-secondary text-secondary-foreground">
+                      {exp.type}
+                    </span>
+                  </div>
+                  <div class="text-sm text-primary font-medium mt-1 flex items-center gap-2">
+                    <span>{exp.company}</span>
+                    <span class="text-muted-foreground/60">·</span>
+                    <span class="text-muted-foreground text-xs font-mono">{exp.location}</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-secondary/80 text-foreground border border-border/50">
+                    <svg class="w-3.5 h-3.5 mr-1.5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    {exp.period}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Body Description -->
+              <p class="text-sm text-muted-foreground leading-relaxed mb-5">
+                {exp.description}
+              </p>
+
+              <!-- Associated Tech Tags -->
+              <div class="flex flex-wrap gap-1.5">
+                {exp.skills.map((skill) => (
+                  <span class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-secondary/40 text-foreground/80 border border-border/40 hover:border-primary/40 transition-colors">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

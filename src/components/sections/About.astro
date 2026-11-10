@@ -1,0 +1,117 @@
+---
+import aboutMeImg from '@/assets/about-me.webp';
+
+const pillars = [
+  {
+    title: 'Distributed Architecture',
+    desc: 'Designing modular microservices, fault-tolerant message queues, and high-throughput databases capable of sustaining peak loads.',
+    tag: 'Cloud & Systems',
+  },
+  {
+    title: 'AI & Agentic Systems',
+    desc: 'Engineering production RAG pipelines, LLM fine-tuning/orchestration, LangChain agents, and semantic retrieval systems.',
+    tag: 'Next-Gen AI',
+  },
+  {
+    title: 'Full-Stack & Mobile',
+    desc: 'Crafting responsive reactive frontends (React, Next.js, Astro) and native mobile apps (Swift/iOS, Kotlin/Android).',
+    tag: 'End-to-End',
+  },
+  {
+    title: 'Engineering Leadership',
+    desc: 'Mentoring engineering teams, establishing rigorous code quality standards, and guiding technical strategy from 0 to 1.',
+    tag: 'Strategic',
+  },
+];
+---
+
+<section id="about" class="py-24 relative overflow-hidden border-t border-border/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="max-w-2xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-primary/10 text-primary mb-3">
+        <span>ABOUT & ARCHITECTURAL APPROACH</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-tight">
+        Bridging architectural rigor with hands-on execution.
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <!-- Portrait & Profile Card (5 cols) -->
+      <div class="lg:col-span-5">
+        <div class="relative group">
+          <!-- Ambient Glow under photo -->
+          <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/20 blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
+          
+          <div class="relative rounded-2xl overflow-hidden glass-panel border border-border/60 shadow-xl">
+            <div class="aspect-[4/4.5] overflow-hidden bg-muted">
+              <img
+                src={aboutMeImg.src || aboutMeImg}
+                alt="Faisal Hussain — Solutions Architect"
+                class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+            
+            <!-- Bottom Profile Overlay Details -->
+            <div class="p-5 border-t border-border/40 bg-card/80 backdrop-blur-md">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="font-display font-bold text-base text-foreground">Faisal Hussain</h3>
+                  <p class="text-xs text-muted-foreground font-mono">Principal Architect & Founder</p>
+                </div>
+                <div class="text-right">
+                  <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-primary text-primary-foreground">
+                    15+ Years
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Micro Badge -->
+          <div class="absolute -top-3 -right-3 px-3 py-1.5 rounded-xl glass-pill border border-border shadow-lg hidden sm:flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="text-xs font-mono font-medium text-foreground">Cloudflare & Edge Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative & 4 Pillars (7 cols) -->
+      <div class="lg:col-span-7 space-y-8">
+        <div class="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground leading-relaxed text-base sm:text-lg space-y-4">
+          <p>
+            With over <strong class="text-foreground">15 years of industry-tested experience</strong>, I have served as Principal Software Developer, Lead Architect, and Founder. I design, build, and optimize software platforms that handle intense traffic, complex data relationships, and critical business operations.
+          </p>
+          <p>
+            My technical breadth spans the entire software engineering spectrum: backend systems in <span class="text-foreground font-medium">Python (Django, FastAPI)</span>, modern reactive ecosystems in <span class="text-foreground font-medium">JavaScript & TypeScript (React, Next.js, Astro, Node.js)</span>, enterprise backends in <span class="text-foreground font-medium">PHP (Laravel)</span>, and native mobile apps in <span class="text-foreground font-medium">Swift</span> and <span class="text-foreground font-medium">Kotlin</span>.
+          </p>
+          <p>
+            Today, I actively drive the integration of <strong class="text-foreground">Agentic AI and Large Language Models (LLMs)</strong> into production workflows—building autonomous agent frameworks, intelligent retrieval-augmented generation (RAG) engines, and real-time inference pipelines that create measurable commercial value.
+          </p>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          {pillars.map((pillar) => (
+            <div class="p-5 rounded-2xl glass-panel border border-border/60 card-hover-effect">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-primary font-semibold">
+                  {pillar.tag}
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+              </div>
+              <h3 class="font-display font-bold text-base text-foreground mb-2">
+                {pillar.title}
+              </h3>
+              <p class="text-xs text-muted-foreground leading-relaxed">
+                {pillar.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/sections/Hero.astro';
+import About from '@/components/sections/About.astro';
+import Experience from '@/components/sections/Experience.astro';
+import Skills from '@/components/sections/Skills.astro';
+import ProjectsIsland from '@/components/sections/ProjectsIsland';
+import ContactIsland from '@/components/sections/ContactIsland';
+---
+
+<Layout
+  title="Faisal Hussain — Senior Solutions Architect & Full-Stack Developer"
+  description="Portfolio of Faisal Hussain: 15+ years engineering high-scale distributed systems, enterprise platforms, and AI/LLM solutions across Python, TypeScript, PHP, Swift, and Kotlin."
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- About Section -->
+  <About />
+
+  <!-- Career Experience Timeline -->
+  <Experience />
+
+  <!-- Capabilities & Skills Matrix -->
+  <Skills />
+
+  <!-- Featured Projects Island (Interactive Filter) -->
+  <ProjectsIsland client:visible />
+
+  <!-- Contact & Direct Inquiries Island (Interactive) -->
+  <ContactIsland client:visible />
+</Layout>

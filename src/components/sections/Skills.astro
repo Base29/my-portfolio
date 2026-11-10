@@ -1,0 +1,150 @@
+---
+const skillCategories = [
+  {
+    title: 'Languages & Core Systems',
+    subtitle: '15+ Years Polyglot Fluency',
+    badge: 'Core Foundation',
+    icon: 'code',
+    skills: [
+      { name: 'Python', level: '15 yrs' },
+      { name: 'TypeScript', level: '8 yrs' },
+      { name: 'JavaScript', level: '15 yrs' },
+      { name: 'PHP', level: '15 yrs' },
+      { name: 'Swift', level: '7 yrs' },
+      { name: 'Kotlin', level: '6 yrs' },
+      { name: 'SQL', level: '15 yrs' },
+      { name: 'Solidity', level: '4 yrs' },
+      { name: 'HTML5/CSS3', level: '15 yrs' },
+    ],
+  },
+  {
+    title: 'Frameworks & Modern Web',
+    subtitle: 'From Enterprise Backends to Reactive Frontends',
+    badge: 'Full Stack',
+    icon: 'layers',
+    skills: [
+      { name: 'React 19', level: 'Expert' },
+      { name: 'Next.js', level: 'Expert' },
+      { name: 'Astro Islands', level: 'Specialist' },
+      { name: 'Node.js', level: 'Expert' },
+      { name: 'FastAPI', level: 'Specialist' },
+      { name: 'Django', level: 'Expert' },
+      { name: 'Laravel', level: 'Expert' },
+      { name: 'Vue.js', level: 'Proficient' },
+      { name: 'Tailwind CSS', level: 'Mastery' },
+    ],
+  },
+  {
+    title: 'AI, LLMs & Agentic Systems',
+    subtitle: 'Production Machine Intelligence & RAG',
+    badge: 'Frontier AI',
+    icon: 'brain',
+    skills: [
+      { name: 'LLM Orchestration', level: 'Advanced' },
+      { name: 'LangChain & LlamaIndex', level: 'Specialist' },
+      { name: 'AI Autonomous Agents', level: 'Production' },
+      { name: 'RAG Pipelines', level: 'Advanced' },
+      { name: 'Prompt Engineering', level: 'Advanced' },
+      { name: 'TensorFlow & PyTorch', level: 'Applied' },
+      { name: 'Hugging Face Ecosystem', level: 'Applied' },
+      { name: 'Vector Databases', level: 'Specialist' },
+    ],
+  },
+  {
+    title: 'Cloud, Edge & Architecture',
+    subtitle: 'Zero Cold-Start & Resilient Microservices',
+    badge: 'Infrastructure',
+    icon: 'server',
+    skills: [
+      { name: 'Cloudflare Pages & Workers', level: 'Edge' },
+      { name: 'AWS Cloud (EC2, S3, RDS)', level: 'Architect' },
+      { name: 'Docker & Containerization', level: 'Expert' },
+      { name: 'PostgreSQL & MySQL', level: 'Expert' },
+      { name: 'MongoDB', level: 'Advanced' },
+      { name: 'Redis Caching', level: 'Specialist' },
+      { name: 'Linux Server Admin', level: '15 yrs' },
+      { name: 'CI/CD & Git Workflows', level: 'Expert' },
+    ],
+  },
+  {
+    title: 'Mobile & Web3 Architecture',
+    subtitle: 'High-Performance Native & Decentralized',
+    badge: 'Ecosystems',
+    icon: 'mobile',
+    skills: [
+      { name: 'React Native', level: 'Expert' },
+      { name: 'Flutter', level: 'Proficient' },
+      { name: 'Native iOS (Swift)', level: 'Specialist' },
+      { name: 'Native Android (Kotlin)', level: 'Specialist' },
+      { name: 'Ethereum Smart Contracts', level: 'Advanced' },
+      { name: 'Web3.js & ethers.js', level: 'Advanced' },
+      { name: 'OpenZeppelin & Hardhat', level: 'Advanced' },
+    ],
+  },
+  {
+    title: 'Architecture & Leadership',
+    subtitle: 'Strategic Engineering Standards & Scale',
+    badge: 'Governance',
+    icon: 'shield',
+    skills: [
+      { name: 'System Design & Modeling', level: 'Principal' },
+      { name: 'Microservices Decoupling', level: 'Principal' },
+      { name: 'API Security & OAuth2', level: 'Expert' },
+      { name: 'Engineering Mentorship', level: '10+ yrs' },
+      { name: 'Technical Roadmap & 0-to-1', level: 'Principal' },
+      { name: 'Performance Optimization', level: 'Expert' },
+    ],
+  },
+];
+---
+
+<section id="skills" class="py-24 relative overflow-hidden border-t border-border/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="max-w-2xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-primary/10 text-primary mb-3">
+        <span>TECHNICAL CAPABILITIES & TOOLING</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-tight">
+        Engineered for full-lifecycle excellence.
+      </h2>
+      <p class="text-sm sm:text-base text-muted-foreground mt-4">
+        Deep technical foundations developed over a decade and a half, continuously augmented with modern AI and edge platforms.
+      </p>
+    </div>
+
+    <!-- Skills Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {skillCategories.map((cat) => (
+        <div class="p-6 rounded-2xl glass-panel border border-border/70 card-hover-effect flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-primary font-bold px-2 py-0.5 rounded bg-primary/10">
+                {cat.badge}
+              </span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-foreground mb-1">
+              {cat.title}
+            </h3>
+            <p class="text-xs text-muted-foreground mb-5 font-mono">
+              {cat.subtitle}
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              {cat.skills.map((skill) => (
+                <div class="group/item inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-secondary/50 text-foreground border border-border/40 hover:border-primary/40 transition-colors">
+                  <span>{skill.name}</span>
+                  <span class="text-[10px] text-muted-foreground/70 font-sans group-hover/item:text-primary transition-colors">
+                    · {skill.level}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

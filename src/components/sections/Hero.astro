@@ -1,0 +1,100 @@
+---
+import heroBg from '@/assets/hero-bg.webp';
+
+const architecturalMetrics = [
+  { value: '15+', label: 'Years Experience', detail: 'Architect to Principal' },
+  { value: '50+', label: 'Systems Delivered', detail: 'Global Enterprise & SaaS' },
+  { value: '99.9%', label: 'Architecture Uptime', detail: 'High-Throughput Backends' },
+  { value: '4', label: 'Core Disciplines', detail: 'AI, Cloud, Full-Stack, Mobile' },
+];
+
+const capabilityTags = [
+  { name: 'Solutions Architecture', icon: 'server' },
+  { name: 'LLMs & AI Agents', icon: 'brain' },
+  { name: 'Full Stack Systems', icon: 'code' },
+  { name: 'Distributed Cloud', icon: 'cloud' },
+  { name: 'Native iOS & Android', icon: 'mobile' },
+];
+---
+
+<section id="home" class="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 overflow-hidden">
+  <!-- Subtle Hero Backdrop Graphic -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-10 dark:opacity-[0.07] mix-blend-luminosity scale-105"
+      style={`background-image: url(${heroBg.src || heroBg});`}
+    ></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-background/30 via-background/80 to-background"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center relative z-10">
+    <!-- Status Pill -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-mono text-muted-foreground mb-8 shadow-sm">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span>Solutions Architect & Engineering Leader</span>
+      <span class="text-border">|</span>
+      <span class="text-foreground font-semibold">15+ Years Track Record</span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-5xl mx-auto mb-6 leading-[1.1]">
+      Architecting high-scale systems and <span class="gradient-accent-text">intelligent digital products</span>.
+    </h1>
+
+    <!-- Subtitle / Bio -->
+    <p class="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-sans">
+      Hi, I'm <strong class="text-foreground font-semibold">Faisal Hussain</strong>. I specialize in designing fault-tolerant distributed backends, ultra-performant modern frontends, and production-grade AI/LLM applications across Python, JavaScript/TypeScript, PHP, Swift, and Kotlin.
+    </p>
+
+    <!-- Capability Tags Strip -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 max-w-4xl mx-auto">
+      {capabilityTags.map((tag) => (
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium glass-panel text-foreground/90 hover:border-primary/40 transition-colors">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary/70"></span>
+          {tag.name}
+        </span>
+      ))}
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-16">
+      <a
+        href="#projects"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-foreground text-background font-semibold text-sm hover:opacity-95 transition-all shadow-md shadow-foreground/5 hover:scale-[1.02]"
+      >
+        <span>Explore Featured Work</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
+
+      <a
+        href="#contact"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full glass-panel text-foreground font-semibold text-sm hover:bg-secondary/70 transition-all border border-border/80"
+      >
+        <span>Direct Connect & Inquiries</span>
+        <svg class="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Metrics Strip -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-border/40">
+      {architecturalMetrics.map((item) => (
+        <div class="p-4 rounded-2xl glass-panel text-left flex flex-col justify-between">
+          <div class="text-3xl sm:text-4xl font-display font-extrabold text-foreground mb-1">
+            {item.value}
+          </div>
+          <div>
+            <div class="text-xs font-semibold text-foreground/90">{item.label}</div>
+            <div class="text-[11px] text-muted-foreground font-mono mt-0.5">{item.detail}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

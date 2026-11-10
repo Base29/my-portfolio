@@ -1,0 +1,76 @@
+---
+import HeaderIsland from '@/components/layout/HeaderIsland';
+import Footer from '@/components/layout/Footer.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Faisal Hussain — Solutions Architect & Full Stack Developer",
+  description = "Crafting high-scale distributed systems, enterprise platforms, and AI/LLM solutions with 15+ years of engineering leadership in Python, JavaScript/TypeScript, PHP, Swift, and Kotlin."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Faisal Hussain" />
+    <meta name="keywords" content="Solutions Architect, Full Stack Developer, Faisal Hussain, Python, TypeScript, React, Next.js, Astro, AI, LLM, LangChain, Django, FastAPI, Cloudflare Pages, Mobile App Developer" />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Faisal Hussain Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Anti-FOUC theme detector script -->
+    <script is:inline>
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark';
+      };
+      const isDark = getThemePreference() === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+
+      if (typeof localStorage !== 'undefined') {
+        const observer = new MutationObserver(() => {
+          const isDarkNow = document.documentElement.classList.contains('dark');
+          localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary relative overflow-x-hidden">
+    <!-- Subtle Background Grid & Gradients -->
+    <div class="fixed inset-0 bg-grid-pattern opacity-40 pointer-events-none -z-20"></div>
+    <div class="fixed -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] ambient-glow-blue pointer-events-none -z-10 blur-3xl"></div>
+    <div class="fixed top-1/2 -right-40 w-[600px] h-[600px] ambient-glow-purple pointer-events-none -z-10 blur-3xl"></div>
+
+    <!-- Header Island (Interactive) -->
+    <HeaderIsland client:load />
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="relative z-10 flex flex-col">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
